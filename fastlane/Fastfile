@@ -1,0 +1,27 @@
+
+default_platform(:ios)
+
+CONFIG = 'Debug'
+SCHEME = 'Template'
+OUTPUT_PATH = './fastlane/screenshots'
+
+platform :ios do
+	desc "Generate ipa"
+	lane :ipa do
+		gym(
+			configuration: CONFIG,
+			scheme: SCHEME,
+		  	build_path: ENV['PWD'],
+		  	silent: true,
+	  		clean: true,
+	  		output_name: "template.ipa",
+	  		export_method: "development"
+		)
+		capture
+	end
+
+	desc "Generate snapshot"
+	lane :capture do
+		snapshot
+	end
+end

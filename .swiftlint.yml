@@ -1,0 +1,79 @@
+# 1行あたりの文字数制限を300に変更
+# プロジェクト作成時のデフォルトコメントを除外するため
+line_length: 300
+# 追加したOSSライブラリは含めない
+excluded:
+- Pods/
+- Carthage/
+# 無効にするルール
+disabled_rules:
+- conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
+- cyclomatic_complexity
+- discouraged_optional_collection # PHImageManagerの既存仕様のため
+- explicit_enum_raw_value # 暗黙的なraw値で問題ないため
+- explicit_type_interface # 型推論を利用したいため
+- fatal_error_message # メッセージは不要なため
+- file_header # ヘッダには特に決まりがないため
+- force_try # try!を許可
+- force_cast # as!を許可
+- identifier_name
+- lower_acl_than_parent # 対応不可のため
+- nesting
+- no_extension_access_modifier # extension_access_modifierを優先するため
+- no_grouping_extension # グルーピングにextensionを利用したいため
+- strict_fileprivate # fileprivateを利用したいため
+- switch_case_on_newline # caseと同じ行に記述したいため
+- trailing_whitespace # 空行を許可
+- type_name # TEST_STRやabcなどの変数名を許可
+# defaultルール以外にopt-inから採用するルール
+opt_in_rules:
+- array_init
+- attributes
+- closure_end_indentation
+- closure_spacing
+- conditional_returns_on_newline
+- contains_over_first_not_nil
+- discouraged_object_literal
+- discouraged_optional_boolean
+- discouraged_optional_collection
+- empty_count
+- empty_string
+- explicit_enum_raw_value
+- explicit_init
+- explicit_type_interface
+- extension_access_modifier
+- fatal_error_message
+- file_header
+- first_where
+- implicit_return
+- joined_default_parameter
+- let_var_whitespace
+- literal_expression_end_indentation
+- multiline_parameters
+- nimble_operator
+- no_extension_access_modifier
+- no_grouping_extension
+- number_separator
+- operator_usage_whitespace
+- overridden_super_call
+- override_in_extension
+- pattern_matching_keywords
+- prefixed_toplevel_constant
+- private_action
+- private_outlet
+- prohibited_super_call
+- quick_discouraged_call
+- quick_discouraged_focused_test
+- quick_discouraged_pending_test
+- redundant_nil_coalescing
+- required_enum_case
+- single_test_class
+- sorted_first_last
+#- sorted_imports 不要
+- strict_fileprivate
+- switch_case_on_newline
+- trailing_closure
+- unneeded_parentheses_in_closure_argument
+- untyped_error_in_catch
+- vertical_parameter_alignment_on_call
+- yoda_condition

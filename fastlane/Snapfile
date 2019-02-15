@@ -1,0 +1,33 @@
+
+# ドキュメント https://docs.fastlane.tools/actions/snapshot/
+
+SCHEME = 'template'
+OUTPUT_PATH = './fastlane/screenshots'
+
+# シミュレータデバイス
+# 処理に時間がかかるのであまり多く選択しない方が良い
+devices([
+  # "iPhone 8",
+  # "iPhone 8 Plus",
+  "iPhone SE",
+  "iPhone X",
+  # "iPad Pro (12.9-inch)",
+  # "iPad Pro (9.7-inch)"
+])
+
+# ローカライズ言語
+languages([
+  "ja-JP"
+])
+
+# 対象スキーム
+scheme(SCHEME)
+
+# スクリーンショット保存パス
+output_directory(OUTPUT_PATH)
+
+# 以前に保存されているスクリーンショットを削除
+clear_previous_screenshots(true)
+
+# 複数のシミュレータで同時にスクリーンショットを実行 (later Xcode 9)
+concurrent_simulators(true)

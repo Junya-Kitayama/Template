@@ -5,6 +5,9 @@ line_length: 300
 excluded:
 - Pods/
 - Carthage/
+- TemplateTests
+- TemplateUITests
+
 # 無効にするルール
 disabled_rules:
 - conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため

@@ -1,0 +1,44 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}Router: {{ module_info.name }}Wireframe {
+        
+    // 画面遷移用のViewController
+    private unowned var viewController: UIViewController
+
+    private init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+
+    static func assembleModule() -> UIViewController {
+        let view = {{ module_info.name }}ViewController.instantiate()
+        let presenter = {{ module_info.name }}Presenter()
+        let interactor = {{ module_info.name }}Interactor()
+        let router = {{ module_info.name }}Router(viewController: view)
+	
+        view.presenter = presenter
+	
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+	
+        interactor.output = presenter
+	
+        return view
+    }
+
+    /* 
+    func showController() {
+        let controller = NextRouter.assembleModule()
+        viewController.present(controller, animated: true, completion: nil)
+        viewController.navigationController?.pushViewController(controller, animated: true)
+    }
+    **/
+}

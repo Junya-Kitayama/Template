@@ -4,10 +4,10 @@ import CoreData
 class CoreDataManager: NSObject {
 
     enum DataModelType: String {
-        case dataModel = "DataModel"
+        case dataModel = "DataModel" // 適宜指定
         
         enum EntityType: String {
-            case test = "Test"
+            case test = "Test" // 適宜指定
         }
     }
 
@@ -60,7 +60,6 @@ class CoreDataManager: NSObject {
             let results = try context.fetch(request) as! [NSManagedObject]
             results.forEach {
                 context.delete($0)
-                try? context.save()
             }
         } catch let error as NSError {
             print("FETCH ERROR:\(error.localizedDescription)")

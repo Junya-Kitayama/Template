@@ -25,6 +25,21 @@
 		23787DDF2383B5AD004E8771 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23787DDE2383B5AD004E8771 /* CoreDataManager.swift */; };
 		23787DE22383B9E3004E8771 /* UILabelWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23787DE12383B9E3004E8771 /* UILabelWithPlaceholder.swift */; };
 		23787DE72383C3D2004E8771 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23787DE62383C3D2004E8771 /* Reachability.framework */; };
+		23787DEB2383C979004E8771 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23787DEA2383C979004E8771 /* MultipartFormData.swift */; };
+		23787DF12384F415004E8771 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23787DF02384F415004E8771 /* Array+Extension.swift */; };
+		23787DF32384F676004E8771 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23787DF22384F676004E8771 /* Collection+Extension.swift */; };
+		23A06D27241F09B90077DC68 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D26241F09B80077DC68 /* UserDefaults+Extension.swift */; };
+		23A06D2A241F0A1E0077DC68 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D28241F0A1E0077DC68 /* IndicatorViewController.swift */; };
+		23A06D2B241F0A1E0077DC68 /* IndicatorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A06D29241F0A1E0077DC68 /* IndicatorView.storyboard */; };
+		23A06D2D241F0A9F0077DC68 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D2C241F0A9F0077DC68 /* Logger.swift */; };
+		23A06D2F241F0AD90077DC68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D2E241F0AD90077DC68 /* Constants.swift */; };
+		23A06D31241F0BA40077DC68 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D30241F0BA40077DC68 /* Common.swift */; };
+		23A06D34241F0C520077DC68 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D32241F0C520077DC68 /* Request.swift */; };
+		23A06D35241F0C520077DC68 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D33241F0C520077DC68 /* APIClient.swift */; };
+		23A06D37241F0C800077DC68 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D36241F0C800077DC68 /* Error.swift */; };
+		23A06D39241F0DE00077DC68 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D38241F0DE00077DC68 /* APIRequest.swift */; };
+		23A06D3C241F0EB90077DC68 /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D3A241F0EB90077DC68 /* NibInstantiatable.swift */; };
+		23A06D3D241F0EB90077DC68 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D3B241F0EB90077DC68 /* StoryboardInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +84,21 @@
 		23787DDE2383B5AD004E8771 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		23787DE12383B9E3004E8771 /* UILabelWithPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelWithPlaceholder.swift; sourceTree = "<group>"; };
 		23787DE62383C3D2004E8771 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		23787DEA2383C979004E8771 /* MultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		23787DF02384F415004E8771 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		23787DF22384F676004E8771 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		23A06D26241F09B80077DC68 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		23A06D28241F0A1E0077DC68 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
+		23A06D29241F0A1E0077DC68 /* IndicatorView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IndicatorView.storyboard; sourceTree = "<group>"; };
+		23A06D2C241F0A9F0077DC68 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		23A06D2E241F0AD90077DC68 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23A06D30241F0BA40077DC68 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		23A06D32241F0C520077DC68 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		23A06D33241F0C520077DC68 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		23A06D36241F0C800077DC68 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		23A06D38241F0DE00077DC68 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		23A06D3A241F0EB90077DC68 /* NibInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
+		23A06D3B241F0EB90077DC68 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +193,9 @@
 				23787DD12383A654004E8771 /* String+Extension.swift */,
 				23787DC72383A237004E8771 /* UIColor+Extension.swift */,
 				23787DC82383A237004E8771 /* UIViewController+Extension.swift */,
+				23787DF02384F415004E8771 /* Array+Extension.swift */,
+				23787DF22384F676004E8771 /* Collection+Extension.swift */,
+				23A06D26241F09B80077DC68 /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -170,6 +203,8 @@
 		23787DCB2383A423004E8771 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				23A06D3A241F0EB90077DC68 /* NibInstantiatable.swift */,
+				23A06D3B241F0EB90077DC68 /* StoryboardInstantiable.swift */,
 				23787DCC2383A42C004E8771 /* ClassNameProtocol.swift */,
 			);
 			path = Protocol;
@@ -178,7 +213,11 @@
 		23787DCE2383A505004E8771 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				23A06D38241F0DE00077DC68 /* APIRequest.swift */,
+				23A06D33241F0C520077DC68 /* APIClient.swift */,
+				23A06D32241F0C520077DC68 /* Request.swift */,
 				23787DCF2383A50D004E8771 /* HTTPMethod.swift */,
+				23787DEA2383C979004E8771 /* MultipartFormData.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -186,7 +225,11 @@
 		23787DD92383B3FC004E8771 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				23A06D30241F0BA40077DC68 /* Common.swift */,
+				23A06D2E241F0AD90077DC68 /* Constants.swift */,
+				23A06D2C241F0A9F0077DC68 /* Logger.swift */,
 				23787DD72383B1FD004E8771 /* Result.swift */,
+				23A06D36241F0C800077DC68 /* Error.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -202,6 +245,8 @@
 		23787DE02383B9D6004E8771 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				23A06D28241F0A1E0077DC68 /* IndicatorViewController.swift */,
+				23A06D29241F0A1E0077DC68 /* IndicatorView.storyboard */,
 				23787DE12383B9E3004E8771 /* UILabelWithPlaceholder.swift */,
 			);
 			path = UI;
@@ -327,6 +372,7 @@
 				236F300122171A6000DF2E74 /* LaunchScreen.storyboard in Resources */,
 				236F2FFE22171A6000DF2E74 /* Assets.xcassets in Resources */,
 				236F2FFC22171A5F00DF2E74 /* Main.storyboard in Resources */,
+				23A06D2B241F0A1E0077DC68 /* IndicatorView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,18 +435,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A06D2A241F0A1E0077DC68 /* IndicatorViewController.swift in Sources */,
+				23A06D2F241F0AD90077DC68 /* Constants.swift in Sources */,
+				23A06D37241F0C800077DC68 /* Error.swift in Sources */,
 				23787DCD2383A42C004E8771 /* ClassNameProtocol.swift in Sources */,
 				23787DD62383A6EC004E8771 /* DateformatType.swift in Sources */,
+				23A06D34241F0C520077DC68 /* Request.swift in Sources */,
+				23A06D35241F0C520077DC68 /* APIClient.swift in Sources */,
 				23787DD22383A654004E8771 /* String+Extension.swift in Sources */,
+				23A06D39241F0DE00077DC68 /* APIRequest.swift in Sources */,
 				23787DCA2383A237004E8771 /* UIViewController+Extension.swift in Sources */,
+				23787DF32384F676004E8771 /* Collection+Extension.swift in Sources */,
 				23787DD02383A50D004E8771 /* HTTPMethod.swift in Sources */,
+				23A06D31241F0BA40077DC68 /* Common.swift in Sources */,
+				23A06D27241F09B90077DC68 /* UserDefaults+Extension.swift in Sources */,
 				23787DD42383A663004E8771 /* Date+Extension.swift in Sources */,
 				23787DD82383B1FD004E8771 /* Result.swift in Sources */,
 				23787DC92383A237004E8771 /* UIColor+Extension.swift in Sources */,
+				23787DEB2383C979004E8771 /* MultipartFormData.swift in Sources */,
 				23787DE22383B9E3004E8771 /* UILabelWithPlaceholder.swift in Sources */,
+				23A06D2D241F0A9F0077DC68 /* Logger.swift in Sources */,
 				236F2FF922171A5F00DF2E74 /* ViewController.swift in Sources */,
+				23787DF12384F415004E8771 /* Array+Extension.swift in Sources */,
+				23A06D3C241F0EB90077DC68 /* NibInstantiatable.swift in Sources */,
 				236F2FF722171A5F00DF2E74 /* AppDelegate.swift in Sources */,
 				23787DDF2383B5AD004E8771 /* CoreDataManager.swift in Sources */,
+				23A06D3D241F0EB90077DC68 /* StoryboardInstantiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

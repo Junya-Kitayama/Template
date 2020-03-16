@@ -19,6 +19,7 @@ disabled_rules:
 - file_header # ヘッダには特に決まりがないため
 - force_try # try!を許可
 - force_cast # as!を許可
+- function_parameter_count
 - identifier_name
 - lower_acl_than_parent # 対応不可のため
 - nesting

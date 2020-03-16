@@ -1,0 +1,30 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+protocol {{ module_info.name }}View: AnyObject {
+    var presenter: {{ module_info.name }}Presentation! { get set }
+}
+
+protocol {{ module_info.name }}Presentation: AnyObject {
+    var view: {{ module_info.name }}View? { get set }
+    var interactor: {{ module_info.name }}UseCase! { get set }
+    var router: {{ module_info.name }}Wireframe! { get set }
+}
+
+protocol {{ module_info.name }}InteractorOutput: AnyObject {
+}
+
+protocol {{ module_info.name }}UseCase: AnyObject {
+    var output: {{ module_info.name }}InteractorOutput? { get set }
+}
+
+protocol {{ module_info.name }}Wireframe: AnyObject {
+    static func assembleModule() -> UIViewController
+}

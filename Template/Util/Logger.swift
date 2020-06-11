@@ -80,7 +80,6 @@ enum Logger {
                               functionName: StaticString,
                               fileName: StaticString,
                               lineNumber: Int) {
-
         let log = OSLog(subsystem: Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as! String, category: "default")
         guard log.isEnabled(type: logType) else { return }
 

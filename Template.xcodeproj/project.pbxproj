@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2347403A2492837400DF69AA /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234740392492837400DF69AA /* UIApplication+Extension.swift */; };
+		2347403C2492839B00DF69AA /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347403B2492839B00DF69AA /* URL+Extension.swift */; };
+		2347403E2492848900DF69AA /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347403D2492848900DF69AA /* PlaceHolderTextView.swift */; };
+		23474042249286F100DF69AA /* Wifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23474041249286F100DF69AA /* Wifi.swift */; };
 		236F2FF722171A5F00DF2E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F2FF622171A5F00DF2E74 /* AppDelegate.swift */; };
 		236F2FF922171A5F00DF2E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F2FF822171A5F00DF2E74 /* ViewController.swift */; };
 		236F2FFC22171A5F00DF2E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236F2FFA22171A5F00DF2E74 /* Main.storyboard */; };
@@ -32,7 +36,7 @@
 		23A06D2A241F0A1E0077DC68 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D28241F0A1E0077DC68 /* IndicatorViewController.swift */; };
 		23A06D2B241F0A1E0077DC68 /* IndicatorView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A06D29241F0A1E0077DC68 /* IndicatorView.storyboard */; };
 		23A06D2D241F0A9F0077DC68 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D2C241F0A9F0077DC68 /* Logger.swift */; };
-		23A06D2F241F0AD90077DC68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D2E241F0AD90077DC68 /* Constants.swift */; };
+		23A06D2F241F0AD90077DC68 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D2E241F0AD90077DC68 /* Alert.swift */; };
 		23A06D31241F0BA40077DC68 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D30241F0BA40077DC68 /* Common.swift */; };
 		23A06D34241F0C520077DC68 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D32241F0C520077DC68 /* Request.swift */; };
 		23A06D35241F0C520077DC68 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A06D33241F0C520077DC68 /* APIClient.swift */; };
@@ -60,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		234740392492837400DF69AA /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		2347403B2492839B00DF69AA /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		2347403D2492848900DF69AA /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		23474041249286F100DF69AA /* Wifi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wifi.swift; sourceTree = "<group>"; };
 		236F2FF322171A5F00DF2E74 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236F2FF622171A5F00DF2E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236F2FF822171A5F00DF2E74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +99,7 @@
 		23A06D28241F0A1E0077DC68 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
 		23A06D29241F0A1E0077DC68 /* IndicatorView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IndicatorView.storyboard; sourceTree = "<group>"; };
 		23A06D2C241F0A9F0077DC68 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		23A06D2E241F0AD90077DC68 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23A06D2E241F0AD90077DC68 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		23A06D30241F0BA40077DC68 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		23A06D32241F0C520077DC68 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		23A06D33241F0C520077DC68 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -188,6 +196,8 @@
 		23787DC62383A1B9004E8771 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2347403B2492839B00DF69AA /* URL+Extension.swift */,
+				234740392492837400DF69AA /* UIApplication+Extension.swift */,
 				23787DD32383A663004E8771 /* Date+Extension.swift */,
 				23787DD52383A6EC004E8771 /* DateformatType.swift */,
 				23787DD12383A654004E8771 /* String+Extension.swift */,
@@ -225,8 +235,9 @@
 		23787DD92383B3FC004E8771 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				23474041249286F100DF69AA /* Wifi.swift */,
 				23A06D30241F0BA40077DC68 /* Common.swift */,
-				23A06D2E241F0AD90077DC68 /* Constants.swift */,
+				23A06D2E241F0AD90077DC68 /* Alert.swift */,
 				23A06D2C241F0A9F0077DC68 /* Logger.swift */,
 				23787DD72383B1FD004E8771 /* Result.swift */,
 				23A06D36241F0C800077DC68 /* Error.swift */,
@@ -248,6 +259,7 @@
 				23A06D28241F0A1E0077DC68 /* IndicatorViewController.swift */,
 				23A06D29241F0A1E0077DC68 /* IndicatorView.storyboard */,
 				23787DE12383B9E3004E8771 /* UILabelWithPlaceholder.swift */,
+				2347403D2492848900DF69AA /* PlaceHolderTextView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -436,9 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A06D2A241F0A1E0077DC68 /* IndicatorViewController.swift in Sources */,
-				23A06D2F241F0AD90077DC68 /* Constants.swift in Sources */,
+				23A06D2F241F0AD90077DC68 /* Alert.swift in Sources */,
 				23A06D37241F0C800077DC68 /* Error.swift in Sources */,
 				23787DCD2383A42C004E8771 /* ClassNameProtocol.swift in Sources */,
+				2347403A2492837400DF69AA /* UIApplication+Extension.swift in Sources */,
+				2347403C2492839B00DF69AA /* URL+Extension.swift in Sources */,
 				23787DD62383A6EC004E8771 /* DateformatType.swift in Sources */,
 				23A06D34241F0C520077DC68 /* Request.swift in Sources */,
 				23A06D35241F0C520077DC68 /* APIClient.swift in Sources */,
@@ -455,6 +469,8 @@
 				23787DEB2383C979004E8771 /* MultipartFormData.swift in Sources */,
 				23787DE22383B9E3004E8771 /* UILabelWithPlaceholder.swift in Sources */,
 				23A06D2D241F0A9F0077DC68 /* Logger.swift in Sources */,
+				2347403E2492848900DF69AA /* PlaceHolderTextView.swift in Sources */,
+				23474042249286F100DF69AA /* Wifi.swift in Sources */,
 				236F2FF922171A5F00DF2E74 /* ViewController.swift in Sources */,
 				23787DF12384F415004E8771 /* Array+Extension.swift in Sources */,
 				23A06D3C241F0EB90077DC68 /* NibInstantiatable.swift in Sources */,

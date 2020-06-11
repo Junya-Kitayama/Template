@@ -6,7 +6,7 @@ protocol KeyNamespaceable {
 
 extension KeyNamespaceable {
     func namespaced<T: RawRepresentable>(_ key: T) -> String {
-        return "\(Self.self).\(key.rawValue)"
+        "\(Self.self).\(key.rawValue)"
     }
 }
 
@@ -29,11 +29,11 @@ extension UserDefaultSettable {
     }
 
     func bool(forKey key: Key) -> Bool {
-        return UserDefaults.standard.bool(forKey: namespaced(key))
+        UserDefaults.standard.bool(forKey: namespaced(key))
     }
 
     func string(forKey key: Key) -> String {
-        return UserDefaults.standard.string(forKey: namespaced(key)) ?? ""
+        UserDefaults.standard.string(forKey: namespaced(key)) ?? ""
     }
 
 }

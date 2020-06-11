@@ -13,16 +13,16 @@ protocol Request {
 extension Request {
 
     #if RELEASE
-    var baseURL: URL { return URL(string: "https://XXX")! }
+    var baseURL: URL { URL(string: "https://XXX")! }
     #else
-    var baseURL: URL { return URL(string: "https://XXX")! }
+    var baseURL: URL { URL(string: "https://XXX")! }
     #endif
 
-    func buildURLRequest() -> URLRequest {
+    func buildURLRequest() -> URLRequest? {
         var request = URLRequest(url: baseURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 60)
         request.httpMethod = method.rawValue
 //        request.setValue( "Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        guard var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true) else { abort() }
+        guard var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true) else { return nil }
         guard let dic = params as? [String: Any] else { return request }
 
         let queryItems = dic.map { key, value in

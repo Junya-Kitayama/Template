@@ -19,6 +19,7 @@ class IndicatorViewController: UIViewController {
             }
         }
     }
+    
     @IBOutlet private weak var messageLabel: UILabel!
 
     func setMessage(message: String) {
@@ -26,5 +27,3 @@ class IndicatorViewController: UIViewController {
         messageLabel.text = message
     }
 }
-
-extension IndicatorViewController: StoryboardInstantiable {}

@@ -15,11 +15,10 @@ class CoreDataManager: NSObject {
     private(set) var context: NSManagedObjectContext!
     
     init(dataModel: DataModelType, completionClosure: @escaping () -> Void) {
-
         let persistentContainer = NSPersistentContainer(name: dataModel.rawValue)
         context = persistentContainer.viewContext
         
-        persistentContainer.loadPersistentStores { description, error in
+        persistentContainer.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(error)")
             }
@@ -28,17 +27,15 @@ class CoreDataManager: NSObject {
     }
 
     func create(entity: DataModelType.EntityType) -> NSManagedObject {
-        return NSEntityDescription.insertNewObject(forEntityName: entity.rawValue, into: context)
+        NSEntityDescription.insertNewObject(forEntityName: entity.rawValue, into: context)
     }
 
     func saveContext() {
-
         if context.hasChanges {
             do {
                 try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            } catch let error as NSError {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         }
     }
@@ -52,7 +49,6 @@ class CoreDataManager: NSObject {
     // predicateの指定がない場合は指定Entityデータを全て削除
     func deleteContext(entity: DataModelType.EntityType,
                        predicate: NSPredicate?) {
-
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
         if predicate != nil { request.predicate = predicate }
 

@@ -10,9 +10,7 @@ class UILabelWithPlaceholder: UILabel {
         didSet {
             self.text = self.placeHolder
             self.sizeToFit()
-            
             self.textColor = self.placeHolderColor
-            
             self.backgroundColor = .clear
         }
     }

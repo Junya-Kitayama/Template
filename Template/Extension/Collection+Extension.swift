@@ -4,7 +4,7 @@ extension Collection {
 
     /// Out of Rangeのチェック
     subscript(safe index: Index) -> Element? {
-        return startIndex <= index && index < endIndex ? self[index] : nil
+        startIndex <= index && index < endIndex ? self[index] : nil
     }
 
 // usage
@@ -17,7 +17,7 @@ extension Collection {
 extension Collection where Element: Hashable {
     /// 重複した値を取り除く
     func unified() -> [Element] {
-        return reduce(into: []) {
+        reduce(into: []) {
             if !$0.contains($1) {
                 $0.append($1)
             }

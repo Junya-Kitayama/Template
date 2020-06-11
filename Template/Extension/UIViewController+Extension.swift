@@ -1,16 +1,18 @@
 import UIKit
 
+extension UIViewController: StoryboardInstantiable {}
+
 extension UIViewController {
 
-    func showAlertDialog(title: AlertTitle,
-                         message: AlertMessage,
-                         okButtonTitle: AlertButtonTitle = AlertButtonTitle.ok,
-                         cancelButtonTitle: AlertButtonTitle? = nil,
+    func showAlertDialog(title: Alert.Title,
+                         message: Alert.Message,
+                         okButtonTitle: Alert.ButtonTitle = .ok,
+                         cancelButtonTitle: Alert.ButtonTitle? = nil,
                          cancelFunc: (() -> Void)? = nil,
                          okFunc: (() -> Void)? = nil) {
-
+        
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: title.getMessage(), message: message.getMessage(), preferredStyle: .alert)
+            let alert = UIAlertController(title: title.message, message: message.message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: okButtonTitle.rawValue, style: .default) { _ in
                 if let okFunc = okFunc { okFunc() }
             }
@@ -43,7 +45,6 @@ extension UIViewController {
         DispatchQueue.main.async {
             if let presented = self.presentedViewController,
                 presented as? IndicatorViewController != nil {
-
                 Common.shared.indicator.dismiss(animated: true) {
                     if completion != nil {
                         completion?()

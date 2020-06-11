@@ -4,16 +4,12 @@ enum APIClient {
 
     static func send<APIRequest: Request>(request: APIRequest,
                                           completion: @escaping (Result<APIRequest.Response, Error>) -> Void) {
-
-        let config = URLSessionConfiguration.default
-        config.waitsForConnectivity = true
-
-        let session = URLSession(configuration: config)
-        let urlRequest = request.buildURLRequest()
+        guard let urlRequest = request.buildURLRequest() else { return }
         Logger.debug(urlRequest.url!.absoluteString)
-
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
         let task = session.dataTask(with: urlRequest) { data, response, error in
-
             if let error = error {
                 Logger.error(error.localizedDescription)
                 completion(.failure(error))

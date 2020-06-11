@@ -15,7 +15,7 @@ extension Array where Element: Equatable {
     /// - Parameter element: 取り除く配列
     @discardableResult
     mutating func remove(elements: [Element]) -> [Index] {
-        return elements.compactMap { remove(element: $0) }
+        elements.compactMap { remove(element: $0) }
     }
 }
 

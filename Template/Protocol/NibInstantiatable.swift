@@ -9,7 +9,7 @@ protocol NibInstantiatable {
 extension NibInstantiatable where Self: UIView {
 
     static var nibName: String {
-        return String(describing: self)
+        String(describing: self)
     }
 
     static func instantiateFromNib(withOwner: AnyObject?, options: [UINib.OptionsKey: AnyObject]?) -> UIView {

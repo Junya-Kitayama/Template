@@ -2,13 +2,13 @@ import Foundation
 
 enum APIRequest {
 
-    struct SomeThing: Request {
+    struct Something: Request {
 
         typealias Response = SomeResponse
 
-        var method: HTTPMethod { return .post }
-        var path: String { return "" }
-        var params: Any? { return nil }
+        var method: HTTPMethod { .post }
+        var path: String { "" }
+        var params: Any? { nil }
     }
 }
 

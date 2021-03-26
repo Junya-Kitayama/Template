@@ -1,27 +1,61 @@
 
 default_platform(:ios)
 
-CONFIG = 'Debug'
+PROJECT_NAME = 'Template'
 SCHEME = 'Template'
-OUTPUT_PATH = './fastlane/screenshots'
+APP_VER = '1.0.0'
+OUTPUT_DIRECTORY = "./build/ipa/"
 
 platform :ios do
-	desc "Generate ipa"
-	lane :ipa do
-		gym(
-			configuration: CONFIG,
-			scheme: SCHEME,
-		  	build_path: ENV['PWD'],
-		  	silent: true,
-	  		clean: true,
-	  		output_name: "template.ipa",
-	  		export_method: "development"
-		)
-		capture
-	end
 
-	desc "Generate snapshot"
-	lane :capture do
-		snapshot
-	end
+  before_all do
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT"] = "180"
+    ENV["FASTLANE_XCODEBUILD_SETTINGS_RETRIES"] = "10"
+    # ENV["SLACK_URL"] = ""
+  end
+
+  after_all do
+    slack(
+      message: "#{PROJECT_NAME}\n ver:#{APP_VER}"
+    )
+  end
+
+  desc "create new ipa"
+
+  lane :debug do
+    gym(
+      configuration: "Debug",
+      scheme: SCHEME,
+      export_method: 'development',
+      output_directory: OUTPUT_DIRECTORY,
+      output_name: PROJECT_NAME + "_" + APP_VER + "_debug.ipa",
+      silent: true,
+      clean: true,
+      include_bitcode: false,
+      export_options: {
+        compileBitcode: false,
+        uploadBitcode: false
+      }
+    )
+  end
+
+  lane :release do
+    gym(
+      configuration: "Release",
+      scheme: SCHEME,
+      export_method: 'app-store',
+      output_directory: OUTPUT_DIRECTORY,
+      output_name: PROJECT_NAME + "_" + APP_VER + "_release.ipa",
+      silent: true,
+      clean: true
+    )
+  end
+
+  error do |lane, exception|
+   slack(
+     message: "#{PROJECT_NAME}\n ver:#{APP_VER}\n #{exception.message}",
+     success: false
+   )
+  end
+
 end

@@ -43,3 +43,22 @@ extension UserDefaults: UserDefaultSettable {
         case some
     }
 }
+
+extension UserDefaults {
+  func setEncoded<T: Encodable>(_ value: T, forKey key: Key) {
+    guard let data = try? JSONEncoder().encode(value) else {
+        print("Can not Encode to JSON.")
+        return
+    }
+    let key = namespaced(key)
+    set(data, forKey: key)
+  }
+
+  func decodedObject<T: Decodable>(_ type: T.Type, forKey key: Key) -> T? {
+    let key = namespaced(key)
+    guard let data = data(forKey: key) else {
+        return nil
+    }
+    return try? JSONDecoder().decode(type, from: data)
+  }
+}

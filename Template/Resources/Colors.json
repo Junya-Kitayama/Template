@@ -1,0 +1,12 @@
+{
+    "main": "#2f457c",
+    "backgroundMain": "#2f457c20",
+    "textFieldDefault": "#d3e1f6",
+    "navigationBackground": "#f9f9f9",
+    "navigationTint": "#4c4c4c",
+    "indicatorBackground": "#7f7f7f",
+    "iconDefault": "#a5a5a5",
+    "header": "#efeff4",
+    "border": "#b5b5b5",
+    "title" : "#6d6d72"
+}

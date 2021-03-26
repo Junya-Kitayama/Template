@@ -1,15 +1,14 @@
 //
 //  IndicatorViewController.swift
-//  Template
+//  Templaten
 //
 //  Created by junya kitayama on 2020/02/07.
-//  Copyright © 2020 justwork. All rights reserved.
+//  Copyright © 2020 junya kitayama. All rights reserved.
 //
 
 import UIKit
 
 class IndicatorViewController: UIViewController {
-
     @IBOutlet private weak var indicator: UIActivityIndicatorView! {
         didSet {
             if #available(iOS 13.0, *) {

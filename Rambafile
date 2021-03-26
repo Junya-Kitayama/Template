@@ -1,19 +1,19 @@
 ### Headers settings
-company: justwork
+company: junya kitayama
 
 ### Xcode project settings
-project_name: SmartSolar
-xcodeproj_path: SmartSolar.xcodeproj
+project_name: Template
+xcodeproj_path: Template.xcodeproj
 
 ### Code generation settings section
 # The main project target name
-project_target: SmartSolar
+project_target: Template
 
 # The file path for new modules
-project_file_path: SmartSolar/Modules
+project_file_path: Template/Modules
 
 # The Xcode group path to new modules
-project_group_path: SmartSolar/Modules
+project_group_path: Template/Modules
 
 ### Tests generation settings section
 # The tests target name
@@ -30,4 +30,5 @@ podfile_path:
 
 ### Templates
 templates:
-- {name: my_viper} # 使いたいテンプレートを選択
+- {name: my_viper}
+- {name: my_mvp}

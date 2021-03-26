@@ -4,7 +4,10 @@ enum APIClient {
 
     static func send<APIRequest: Request>(request: APIRequest,
                                           completion: @escaping (Result<APIRequest.Response, Error>) -> Void) {
-        guard let urlRequest = request.buildURLRequest() else { return }
+        guard let urlRequest = request.buildURLRequest() else {
+            return
+        }
+        
         Logger.debug(urlRequest.url!.absoluteString)
         
         let config = URLSessionConfiguration.default

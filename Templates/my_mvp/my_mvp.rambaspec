@@ -1,0 +1,20 @@
+# Template information section
+name: "my_mvp"
+author: "Junya Kitayama"
+version: "0.0.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View layer
+- {name: View/View.swift, path: Code/View/view.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Model layer
+- {name: Model/Model.swift, path: Code/Model/model.swift.liquid}
+
+# Builder layer
+- {name: Builder/Builder.swift, path: Code/Builder/builder.swift.liquid}

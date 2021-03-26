@@ -1,0 +1,23 @@
+xcassets:
+  templateName: swift5
+  paths: Template/Resources/Assets.xcassets
+  output: Template/Resources/Generated/AssetsImages.swift
+
+ib:
+  inputs: Template/Storyboards
+  filter: .+\.storyboard$
+  outputs:
+    - templateName: scenes-swift5
+      output: Template/Resources/Generated/Storyboard Scenes.swift
+      
+colors:
+  inputs: Template/Resources/Colors.json
+  outputs:
+    templateName: swift5
+    output: Template/Resources/Generated/Colors.swift
+        
+plist:
+  inputs: Template/info.plist
+  outputs:
+    templateName: runtime-swift5
+    output: Template/Resources/Generated/Plist.swift

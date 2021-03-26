@@ -4,22 +4,25 @@ extension UIViewController: StoryboardInstantiable {}
 
 extension UIViewController {
 
-    func showAlertDialog(title: Alert.Title,
-                         message: Alert.Message,
-                         okButtonTitle: Alert.ButtonTitle = .ok,
-                         cancelButtonTitle: Alert.ButtonTitle? = nil,
+    func showAlertDialog(title: String = "",
+                         message: String = "",
+                         okButtonTitle: String = Alert.ButtonTitle.ok,
+                         cancelButtonTitle: String? = nil,
                          cancelFunc: (() -> Void)? = nil,
                          okFunc: (() -> Void)? = nil) {
-        
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: title.message, message: message.message, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: okButtonTitle.rawValue, style: .default) { _ in
-                if let okFunc = okFunc { okFunc() }
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: okButtonTitle, style: .default) { _ in
+                if let okFunc = okFunc {
+                    okFunc()
+                }
             }
 
             if let cancelButtonTitle = cancelButtonTitle {
-                let cancelAction = UIAlertAction(title: cancelButtonTitle.rawValue, style: .default) { _ in
-                    if let cancelFunc = cancelFunc { cancelFunc() }
+                let cancelAction = UIAlertAction(title: cancelButtonTitle, style: .default) { _ in
+                    if let cancelFunc = cancelFunc {
+                        cancelFunc()
+                    }
                 }
                 alert.addAction(cancelAction)
             }
